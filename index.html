@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="script.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>Tic Tac Toe</header>
+    <main>
+        <section class="intro">
+            <h2>Who's playing?</h2>
+            <span class="radio-block">Goes first</span>
+            <div class="players-block">
+                <div class="player-intro">
+                    <span>Player 1:</span>
+                    <input type="text" class="input-player name1" oninput="handleChangeInput()">
+                    <div class="radio">
+                        <input class="radio-item" name="first" id="player1" type="radio" value="player1" onchange="handleChangeRadio()">
+                        <label class="radio-label" for="player1"></label>
+                    </div>
+                </div>
+                <div class="player-intro">
+                    <span>Player 2:</span>
+                    <input type="text" class="input-player name2" oninput="handleChangeInput()">
+                    <div class="radio">
+                        <input class="radio-item" name="first" id="player2" type="radio" value="player2" onchange="handleChangeRadio()">
+                        <label class="radio-label" for="player2"></label>
+                    </div>
+                </div>
+            </div>
+            <button class="start-btn" >Start</button>
+        </section>
+
+        <section class="game-field">
+            <h1 class="winner-info"></h1>
+            <div class="players">
+                <div class="player1"></div>
+                <div class="player2"></div>
+            </div>
+            <p class="turn-info"></p>
+            <div class="cells">
+                <div class="cell" data-cell-index="0"></div>
+                <div class="cell" data-cell-index="1"></div>
+                <div class="cell" data-cell-index="2"></div>
+                <div class="cell" data-cell-index="3"></div>
+                <div class="cell" data-cell-index="4"></div>
+                <div class="cell" data-cell-index="5"></div>
+                <div class="cell" data-cell-index="6"></div>
+                <div class="cell" data-cell-index="7"></div>
+                <div class="cell" data-cell-index="8"></div>
+            </div>
+            <button class="restart-btn">Restart</button>
+    </main>
+
+    
+</body>
+</html>
